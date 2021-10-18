@@ -1,0 +1,28 @@
+@import "../../../styles/palette";
+@import "../../../styles/mixins";
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  margin-top: auto;
+  height: 92px;
+
+  .terms {
+    margin-left: 20px;
+    position: relative;
+
+    &:before {
+      content: "";
+      @include underline-link();
+      background-color: $white;
+      transform: scaleX(0);
+    }
+
+    &:hover:before {
+      content: "";
+      @include underline-link();
+      background-color: $white;
+      transform: scaleX(1);
+    }
+  }
+}

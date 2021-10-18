@@ -1,0 +1,48 @@
+@import "./src/styles/palette";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif, 'Rubik Mono One', sans-serif;
+  outline: none;
+}
+
+#root{
+  //display: flex;
+  //flex: 1;
+  //flex-direction: column;
+  //min-height: 100vh;
+  //height: 100%;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text {
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  color: $white;
+
+  &--giant {
+    font-size: 200px;
+    line-height: 244px;
+  }
+
+  &--big {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  &--middle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &--small {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+

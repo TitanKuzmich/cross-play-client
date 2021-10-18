@@ -1,0 +1,121 @@
+@import "../../../styles/palette";
+@import "../../../styles/mixins";
+
+.mainNavigation {
+  height: 92px;
+  margin-top: 36px;
+  position: fixed;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  @include mediaMax(960){
+    position: fixed;
+    top: -92px;
+    left: -100%;
+    background-color: $black;
+    height: calc(100vh + 68px);
+    width: 100%;
+    transition: .6s;
+    z-index: 10;
+
+    ul {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+      li{
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.mainNavigationOpen {
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+
+  @include mediaMax(960) {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 1000;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $white;
+      margin-bottom: 2px;
+      transition: 0.5s all ease;
+    }
+  }
+}
+
+.hamburgerOpen span {
+  margin-bottom: -2px;
+
+  &:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg)
+  }
+
+  &:nth-child(2) {
+    display: none
+  }
+
+  &:nth-child(3) {
+    transform: translateY(3px) rotate(45deg)
+  }
+}
+
+.menuItem {
+  text-transform: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+
+  &:before {
+    content: "";
+    @include underline-link();
+    background-color: $white;
+    transform: scaleX(0);
+  }
+
+  &:hover:before {
+    content: "";
+    @include underline-link();
+    background-color: $white;
+    transform: scaleX(1);
+  }
+}
+
+.menuItemActive {
+  color: $active;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $active;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+  }
+}

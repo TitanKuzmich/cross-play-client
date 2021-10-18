@@ -1,0 +1,12 @@
+@import "./src/styles/mixins";
+
+.wrapper {
+  width: 1500px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+
+  @include mediaMax(960){
+    width: 90%;
+  }
+}
