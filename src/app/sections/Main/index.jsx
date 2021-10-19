@@ -1,5 +1,4 @@
 import React from 'react';
-import Lottie from 'react-lottie';
 import classnames from "classnames";
 
 import style from './style.module.scss';

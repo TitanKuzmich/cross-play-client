@@ -4,7 +4,7 @@ import classnames from "classnames";
 import {gradients} from "./gradients";
 import style from "./style.module.scss";
 
-const Gradient = ({disable, colors}) => {
+const Gradient = ({disable}) => {
     const gradientRefs = [];
 
     const [lastPos, setLastPos] = useState(0);
