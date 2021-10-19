@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {NavLink, useHistory} from "react-router-dom";
+import React, {useState} from 'react';
+import {NavLink} from "react-router-dom";
 import classnames from "classnames";
 
 import Wrapper from '../Wrapper';
@@ -8,7 +8,7 @@ import style from "./style.module.scss";
 import {paths} from "./helper";
 
 const Header = () => {
-    const history = useHistory();
+    // const history = useHistory();
     const [isOpen, setOpen] = useState(false);
 
     const toggleOpen = () => {

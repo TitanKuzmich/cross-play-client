@@ -1,0 +1,10 @@
+@import "./src/styles/palette";
+
+.gradient{
+  position: absolute;
+  top: -54px;
+  height: 420px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}

@@ -5,6 +5,7 @@
   margin: 0 auto;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 
   @include mediaMax(960){
     width: 90%;

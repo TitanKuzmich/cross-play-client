@@ -9,11 +9,7 @@
 }
 
 #root{
-  //display: flex;
-  //flex: 1;
-  //flex-direction: column;
-  //min-height: 100vh;
-  //height: 100%;
+  position: relative;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,3 +42,23 @@
   }
 }
 
+
+.gradientLinearPurple{
+  background: $purple-gradient--linear;
+}
+
+.gradientLinearYellow{
+  background: $yellow-gradient--linear;
+}
+
+.gradientLinearBlue{
+  background: $blue-gradient--linear;
+}
+
+.gradientLinearGreen{
+  background: $green-gradient--linear;
+}
+
+.gradientLinearRed{
+  background: $red-gradient--linear;
+}

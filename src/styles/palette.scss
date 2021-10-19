@@ -1,3 +1,4 @@
+//MAIN COLORS
 $background: #201F1F;
 $black: #000000;
 $blue: #0077FF;
@@ -9,11 +10,15 @@ $grey-yellow: rgba(255, 255, 255, 0.73);
 
 //GRADIENTS
 //linear
-$purple-gradient--linear: linear-gradient(180deg, rgba(122, 3, 241, 0.4) 0%, rgba(129, 42, 240, 0.168) 45.83%, rgba(68, 116, 239, 0.0104167) 99.99%, rgba(139, 123, 145, 0) 100%);
-$yellow-gradient--linear: linear-gradient(180deg, rgba(236, 241, 3, 0.4) 0%, rgba(236, 240, 42, 0.168) 45.83%, rgba(68, 116, 239, 0.0104167) 99.99%, rgba(145, 144, 123, 0) 100%);
-$blue-gradient--linear: linear-gradient(180deg, #0456D0 0%, #099FF4 100%);
-$green-gradient--linear: linear-gradient(180deg, #04B9D0 0%, #82F409 100%);
-$yellow-gradient--linear: linear-gradient(180deg, #D0C804 0%, #F4C009 100%);
+$purple-gradient--linear: linear-gradient(180deg, rgba(122, 3, 241, 0.4) 0%, rgba(129, 42, 240, 0.168) 32.81%, rgba(139, 123, 145, 0) 66.67%, $background 80%);
+$yellow-gradient--linear: linear-gradient(180deg, rgba(236, 241, 3, 0.4) 0%, rgba(236, 240, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
+$blue-gradient--linear: linear-gradient(180deg, rgba(3, 241, 227, 0.4) 0%, rgba(42, 228, 240, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
+$green-gradient--linear: linear-gradient(180deg, rgba(79, 241, 3, 0.4) 0%, rgba(105, 240, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
+$red-gradient--linear: linear-gradient(180deg, rgba(241, 60, 3, 0.4) 0%, rgba(240, 77, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
+//cards
+$blue-gradient--card: linear-gradient(180deg, #0456D0 0%, #099FF4 100%);
+$green-gradient--card: linear-gradient(180deg, #04B9D0 0%, #82F409 100%);
+$yellow-gradient--card: linear-gradient(180deg, #D0C804 0%, #F4C009 100%);
 //radial
 $green-gradient--radial: radial-gradient(50% 50% at 50% 50%, rgba(27, 211, 101, 0.4) 0%, rgba(66, 220, 81, 0.168) 45.83%, rgba(68, 116, 239, 0.0104167) 99.99%, rgba(130, 151, 138, 0) 100%);
 $blue-gradient--radial: radial-gradient(50% 50% at 50% 50%, rgba(0, 209, 255, 0.4) 0%, rgba(24, 194, 194, 0.156) 45.83%, rgba(68, 116, 239, 0.0104167) 99.99%, rgba(19, 179, 150, 0) 100%);

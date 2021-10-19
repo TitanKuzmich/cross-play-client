@@ -3,9 +3,10 @@
 
 .mainNavigation {
   height: 92px;
-  margin-top: 36px;
-  position: fixed;
+  position: absolute;
   width: 100%;
+  top: 36px;
+  left: 0;
 
   ul {
     display: flex;
