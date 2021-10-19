@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import classnames from "classnames";
 
-import Wrapper from '../Wrapper';
-
 import style from "./style.module.scss";
 import {paths} from "./helper";
+import Wrapper from "../Wrapper";
 
 const Header = () => {
     // const history = useHistory();
@@ -16,7 +15,7 @@ const Header = () => {
     }
 
     return (
-        <Wrapper>
+        <Wrapper extraClassName={style.headerWrapper}>
             <nav className={classnames(style.mainNavigation, {[style.mainNavigationOpen]: isOpen})}>
                 <ul>
                     {paths.map((path) => (

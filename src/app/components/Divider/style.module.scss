@@ -1,17 +1,19 @@
+@import "../../../styles/palette";
+
 .divider{
   width: 100%;
   height: 3px;
   background-color: $white;
 
-  &--medium{
-    width: 80%;
+  &Medium{
+    width: 70%;
   }
 
-  &--small{
-    width: 30%;
+  &Small{
+    width: 25%;
   }
 
-  &--vertical{
+  &Vertical{
     width: 3px;
     height: 120%;
   }

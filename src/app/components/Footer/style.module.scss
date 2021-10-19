@@ -3,9 +3,12 @@
 
 .footer {
   width: 100%;
+  position: absolute;
   bottom: 0;
   margin-top: auto;
   height: 92px;
+  display: flex;
+  align-items: center;
 
   .terms {
     margin-left: 20px;

@@ -9,6 +9,7 @@
 }
 
 #root{
+  min-height: 100vh;
   position: relative;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
