@@ -6,6 +6,8 @@ import style from "./style.module.scss";
 import {paths} from "./helper";
 import Wrapper from "../Wrapper";
 
+import logo from "../../assets/svg/astronaut.svg";
+
 const Header = () => {
     // const history = useHistory();
     const [isOpen, setOpen] = useState(false);
@@ -33,6 +35,11 @@ const Header = () => {
                     ))}
                 </ul>
             </nav>
+
+
+            <div className={style.logo}>
+                <img src={logo} alt="logo"/>
+            </div>
 
             <div
                 className={classnames(style.hamburger, {[style.hamburgerOpen]: isOpen})}

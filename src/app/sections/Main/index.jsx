@@ -16,11 +16,11 @@ const Main = () => {
                         <p className={classnames("text text--big")}>
                             Слушаете музыку ВК, но хотите перейти на Spotify?
                         </p>
-                        <Divider width={"medium"} margin={50}/>
+                        <Divider width={"medium"} extraClassName={style.divider}/>
                         <p className={classnames("text text--big")}>
                             Не проблема!
                         </p>
-                        <Divider width={"small"} margin={50}/>
+                        <Divider width={"small"} extraClassName={style.divider}/>
                         <p className={classnames("text text--big")}>
                             Мы поможем Вам в пару кликов перенести плейлисты в новый сервис.
                         </p>

@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from "react-router-dom";
 import { createBrowserHistory } from 'history';
 
-import './styles/global.scss';
 import App from './App';
+
+import './styles/global.scss';
 
 const browserHistory = createBrowserHistory();
 

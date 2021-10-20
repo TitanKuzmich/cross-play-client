@@ -1,4 +1,5 @@
 @import "./src/styles/palette";
+@import "./src/styles/mixins";
 
 * {
   margin: 0;
@@ -11,6 +12,7 @@
 #root{
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
 }
@@ -24,22 +26,46 @@
   &--giant {
     font-size: 200px;
     line-height: 244px;
+
+    @include mediaMax(1300){
+
+    }
   }
 
   &--big {
     font-size: 32px;
     line-height: 39px;
+
+    @include mediaMax(1300){
+      font-size: 28px;
+    }
+
+    @include mediaMax(500){
+      font-size: 26px;
+    }
   }
 
   &--middle {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
+
+    @include mediaMax(1300){
+      font-size: 22px;
+    }
+
+    @include mediaMax(500){
+      font-size: 22px;
+    }
   }
 
   &--small {
     font-size: 18px;
     line-height: 22px;
+
+    @include mediaMax(1300){
+      font-size: 16px;
+    }
   }
 }
 
