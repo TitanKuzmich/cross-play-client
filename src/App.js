@@ -5,6 +5,7 @@ import Lottie from "react-lottie";
 
 import Header from "./app/components/Header";
 import Main from "./app/sections/Main";
+import WhySafe from "./app/sections/WhySafe";
 import Footer from "./app/components/Footer";
 import Gradient from "./app/components/Gradient";
 
@@ -42,7 +43,8 @@ const App = () => {
         <>
             <Gradient/>
             <Header/>
-            <Main/>
+            {/*<Main/>*/}
+            <WhySafe/>
             <Footer/>
             <div className={classnames(style.invitationCat, {[style.invitationCatOpen]: invCatOpen})}>
                 <div className={style.lottieWrapper}>

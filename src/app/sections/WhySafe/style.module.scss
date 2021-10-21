@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+
+.mainWrapper{
+  height: calc(100vh - 200px);
+  padding: 56px 100px 0 100px;
+
+  @include mediaMax(1300){
+    padding: 66px 43px 0 43px;
+  }
+
+  @include mediaMax(600){
+    padding: 66px 0 0 0;
+    height: calc(100vh - 156px);
+  }
+
+  @include mediaMax(340){
+    padding: 76px 0 0 0;
+  }
+
+  .arrow {
+    width: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    right: 28px;
+    transform-origin: 50% 50%;
+
+    &Prev{
+      transform: translateY(-57%) rotate(180deg);
+      right: unset;
+      left: 28px;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .slide{
+    width: 500px !important;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .divider{
+      margin: 40px 0;
+    }
+
+    .lottieWrapper{
+      height: 240px;
+      width: 240px;
+    }
+  }
+}

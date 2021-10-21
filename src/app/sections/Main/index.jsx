@@ -10,7 +10,7 @@ import mainImg from "../../assets/png/interraction.png";
 
 const Main = () => {
     return (
-        <Wrapper extraClassName={style.mainWrapper}>
+        <Wrapper id="main" extraClassName={style.mainWrapper}>
                 <div className={style.contentWrapper}>
                     <div className={style.leftSide}>
                         <p className={classnames("text text--big")}>
