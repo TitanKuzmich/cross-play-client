@@ -1,4 +1,4 @@
-import codeWindow from "../../assets/lottie/codeWindow.json";
+import sourceCode from "../../assets/lottie/sourceCode.json";
 import browser from "../../assets/lottie/browser.json";
 import lock from "../../assets/lottie/lock.json";
 import toServer from "../../assets/lottie/toServer.json";
@@ -46,7 +46,7 @@ export const slides = [
         lottieOption: {
             loop: true,
             autoplay: true,
-            animationData: codeWindow,
+            animationData: sourceCode,
             rendererSettings: {
                 preserveAspectRatio: 'xMidYMid slice'
             }

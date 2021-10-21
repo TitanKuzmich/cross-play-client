@@ -3,18 +3,20 @@
 .mainWrapper{
   height: calc(100vh - 200px);
   padding: 56px 100px 0 100px;
+  display: flex;
+  align-items: center;
 
   @include mediaMax(1300){
     padding: 66px 43px 0 43px;
   }
 
   @include mediaMax(600){
-    padding: 66px 0 0 0;
-    height: calc(100vh - 156px);
+    padding: 46px 36px 0 36px;
+    height: calc(100vh - 148px);
   }
 
   @include mediaMax(340){
-    padding: 76px 0 0 0;
+    padding: 76px 36px 0 36px;
   }
 
   .arrow {
@@ -23,7 +25,9 @@
     top: 50%;
     transform: translateY(-50%) rotate(0deg);
     right: 28px;
+    cursor: pointer;
     transform-origin: 50% 50%;
+    z-index: 50;
 
     &Prev{
       transform: translateY(-57%) rotate(180deg);
@@ -34,10 +38,20 @@
     img{
       width: 100%;
     }
+
+    @include mediaMax(600){
+      top: 50%;
+      left: unset;
+      right: 0;
+
+      &Prev{
+        right: unset;
+        left: 0;
+      }
+    }
   }
 
   .slide{
-    width: 500px !important;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -46,11 +60,41 @@
 
     .divider{
       margin: 40px 0;
+
+      @include mediaMax(600){
+        margin: 20px 0;
+      }
+
+      @include mediaMax(450){
+        margin: 10px 0;
+      }
+    }
+
+    .contentText{
+      @include mediaMax(450){
+        font-size: 18px;
+      }
     }
 
     .lottieWrapper{
       height: 240px;
       width: 240px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        width: 120%!important;
+        height: 120%!important;
+        pointer-events: none;
+      }
+
+
+      @include mediaMax(340){
+        height: 140px;
+        width: 140px;
+      }
     }
   }
 }

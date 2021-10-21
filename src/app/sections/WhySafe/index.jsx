@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classnames from "classnames";
 import Lottie from "react-lottie";
-import {Navigation, Pagination, Swiper} from "swiper";
-import SwiperCore from "swiper";
-import {SwiperSlide} from "swiper/cjs/swiper-react";
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Navigation, Pagination} from "swiper";
 
-import "swiper/swiper.min.css";
+import 'swiper/swiper-bundle.min.css'
 
 import Divider from "../../components/Divider";
 import Wrapper from "../../components/Wrapper";
@@ -31,13 +30,17 @@ const WhySafe = () => {
                     nextEl: ".nextEl",
                     prevEl: ".prevEl"
                 }}
-                slidesPerView={2}
+                pagination={false}
+                slidesPerView={1}
                 loopFillGroupWithBlank={true}
-                spaceBetween={70}
-                // loop={true}
-                // centeredSlides={true}
-                pagination={{
-                    "clickable": true
+                centeredSlides={true}
+                loop={true}
+                breakpoints={{
+                    1000: {
+                        slidesPerView: 2,
+                        centeredSlides: false,
+                        spaceBetween: 70,
+                    },
                 }}
             >
                 {slides.map((slide, i) => (
@@ -47,13 +50,12 @@ const WhySafe = () => {
                     >
                         <div className={style.lottieWrapper}>
                             <Lottie options={slide.lottieOption}/>
-
                         </div>
                         <div className="text text--big">
                             {slide.title}
                         </div>
                         <Divider width="small" extraClassName={style.divider}/>
-                        <div className="text text--middle">
+                        <div className={classnames(style.contentText, "text text--middle")}>
                             {slide.content}
                         </div>
                     </SwiperSlide>
