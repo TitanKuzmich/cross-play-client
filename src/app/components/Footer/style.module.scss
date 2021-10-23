@@ -6,7 +6,7 @@
   position: absolute;
   bottom: 0;
   margin-top: auto;
-  height: 92px;
+  height: 52px;
   display: flex;
   align-items: center;
 
@@ -34,7 +34,7 @@
   }
 
   .policyWrapper{
-    padding: 73px;
+    padding: 23px;
 
     @include mediaMax(795){
       padding: 0;

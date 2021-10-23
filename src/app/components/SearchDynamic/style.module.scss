@@ -1,0 +1,52 @@
+@import "../../../styles/palette";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  min-width: 200px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 230px;
+  min-width: 180px;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  border-radius: 2px;
+  border-bottom: 3px solid $white;
+}
+.iconWrapper {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  cursor: pointer;
+  top: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.inputSearch {
+  height: 100%;
+  letter-spacing: 0.4px;
+  padding: 10px 38px 10px 10px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  min-width: 120px;
+  border: 0;
+  background: transparent;
+  color: $white;
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+.loadingWrapper {
+  height: 38px;
+  width: 38px;
+  padding-top: 7px;
+}

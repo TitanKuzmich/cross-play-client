@@ -7,6 +7,7 @@ import Header from "./app/components/Header";
 import Main from "./app/sections/Main";
 import WhySafe from "./app/sections/WhySafe";
 import Contacts from "./app/sections/Contacts";
+import Transfer from "./app/sections/Transfer";
 import Footer from "./app/components/Footer";
 import Gradient from "./app/components/Gradient";
 
@@ -46,7 +47,8 @@ const App = () => {
             <Header/>
             {/*<Main/>*/}
             {/*<WhySafe/>*/}
-            <Contacts/>
+            {/*<Contacts/>*/}
+            <Transfer/>
             <Footer/>
             <div className={classnames(style.invitationCat, {[style.invitationCatOpen]: invCatOpen})}>
                 <div className={style.lottieWrapper}>

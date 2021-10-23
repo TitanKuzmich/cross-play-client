@@ -1,0 +1,79 @@
+@import "../../../../styles/palette";
+@import "../../../../styles/mixins";
+
+.cardWrapper{
+  position: relative;
+  width: 280px;
+  height: 295px;
+  padding: 25px;
+  background: $background;
+  border-radius: 45px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(60px at center 96px);
+    transition: all .6s ease-in-out;
+  }
+
+  &Spotify{
+    box-shadow: $green-shadow;
+
+    &:before{
+      background: $green-gradient--card;
+    }
+  }
+
+  &Yandex{
+    box-shadow: $yellow-shadow;
+
+    &:before{
+      background: $yellow-gradient--card;
+    }
+  }
+
+  &Vk{
+    box-shadow: $blue-shadow;
+
+    &:before{
+      background: $blue-gradient--card;
+    }
+  }
+
+  .cardTitle{
+    position: relative;
+    z-index: 1;
+  }
+
+  .cardIcon {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: $white;
+    border-radius: 50%;
+    font-weight: 700;
+    transition: .5s;
+    border: 1px solid rgba($white, 0);
+    box-shadow: 0 0 0 0 $white;
+  }
+
+  &Spotify:hover, &Yandex:hover, &Vk:hover{
+    &:before{
+      clip-path: circle(450px at center 96px);
+    }
+  }
+}

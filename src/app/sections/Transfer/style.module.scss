@@ -1,0 +1,65 @@
+@import "../../../styles/mixins";
+@import "../../../styles/palette";
+
+.mainWrapper {
+  height: calc(100vh - 160px);
+  padding: 56px 36px 0 36px;
+  display: flex;
+  flex-direction: column;
+
+  @include mediaMax(1300) {
+    padding: 66px 43px 0 43px;
+  }
+
+  @include mediaMax(760) {
+    padding: 46px 36px 0 36px;
+    height: calc(100vh - 148px);
+  }
+
+  @include mediaMax(340) {
+    padding: 76px 36px 0 36px;
+  }
+
+  .subHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Text{
+      max-width: 70%;
+      width: 100%;
+
+      @include mediaMax(1100){
+        max-width: 60%;
+      }
+    }
+  }
+
+  .platforms{
+    height: 100%;
+
+    .scrollWrapper{
+      margin-top: 10px;
+      padding: 40px!important;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      overflow-x: hidden;
+    }
+
+    .platform{
+      margin-bottom: 50px;
+    }
+  }
+
+  .trackHorizontal{
+    display: none;
+  }
+
+  .thumbHorizontal{
+    display: none;
+  }
+}
