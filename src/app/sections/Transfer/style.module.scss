@@ -45,21 +45,21 @@
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       flex-wrap: wrap;
       overflow-x: hidden;
+
+      .scroller{
+        color: $yellow;
+      }
     }
 
     .platform{
-      margin-bottom: 50px;
+      margin-bottom: 70px;
+      margin-right: 90px;
+
+      &:nth-child(3n){
+        margin-right: 0;
+      }
     }
-  }
-
-  .trackHorizontal{
-    display: none;
-  }
-
-  .thumbHorizontal{
-    display: none;
   }
 }

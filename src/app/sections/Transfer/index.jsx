@@ -37,13 +37,20 @@ const Transfer = () => {
                             return <div {...restProps} ref={elementRef} className={style.scrollWrapper} />;
                         }
                     }}
+
+                    scrollerProps={{
+                        renderer: props => {
+                            const { elementRef, ...restProps } = props;
+                            return <span {...restProps} ref={elementRef} className={style.scroller} />;
+                        }
+                    }}
                 >
                     {platforms.map((platform, i) => (
                         <div
                             className={style.platform}
                             key={`${platform.title}_${i}`}
                         >
-                            <PlatformCard {...platform}/>
+                            <PlatformCard {...platform} />
                         </div>
                     ))}
                 </Scrollbar>
