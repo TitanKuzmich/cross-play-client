@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classnames from "classnames";
 import Lottie from "react-lottie";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Navigation, Pagination} from "swiper";
 
+import style from "./style.module.scss";
 import 'swiper/swiper-bundle.min.css'
 
 import Divider from "../../components/Divider";
 import Wrapper from "../../components/Wrapper";
 
-import {slides} from "./helper"
-import style from "./style.module.scss";
 import arrow from '../../assets/svg/arrow.svg';
+import {slides} from "./helper"
 
 SwiperCore.use([Navigation, Pagination]);
 

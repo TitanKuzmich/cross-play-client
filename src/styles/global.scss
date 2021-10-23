@@ -17,6 +17,24 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.disappearOnComp{
+  @include mediaMin(1000){
+    display: none!important;
+  }
+}
+
+.disappearOnTablet{
+  @include mediaMax(1000){
+    display: none!important;
+  }
+}
+
+.disappearOnPhone{
+  @include mediaMax(600){
+    display: none!important;
+  }
+}
+
 .text {
   font-style: normal;
   font-weight: bold;

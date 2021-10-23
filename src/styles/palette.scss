@@ -5,6 +5,7 @@ $blue: #0077FF;
 $lightblue: #099FF4;
 $active: #D0C804;
 $yellow: #FFCC00;
+$lilac: #E6683C;
 $white: #FFFFFF;
 $grey-yellow: rgba(255, 255, 255, 0.73);
 
@@ -13,10 +14,14 @@ $grey-yellow: rgba(255, 255, 255, 0.73);
 $purple-gradient--linear: linear-gradient(180deg, rgba(122, 3, 241, 0.4) 0%, rgba(129, 42, 240, 0.168) 32.81%, rgba(139, 123, 145, 0) 66.67%, $background 80%);
 $yellow-gradient--linear: linear-gradient(180deg, rgba(236, 241, 3, 0.4) 0%, rgba(236, 240, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
 $blue-gradient--linear: linear-gradient(180deg, rgba(3, 241, 227, 0.4) 0%, rgba(42, 228, 240, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
+$black-gradient--linear: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(53, 70, 71, 0.168) 32.81%, rgba(56, 84, 84, 0) 66.67%, $background 80%);
 $green-gradient--linear: linear-gradient(180deg, rgba(79, 241, 3, 0.4) 0%, rgba(105, 240, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
 $red-gradient--linear: linear-gradient(180deg, rgba(241, 60, 3, 0.4) 0%, rgba(240, 77, 42, 0.168) 32.81%, rgba(68, 116, 239, 0.0104167) 66.67%, $background 80%);
 //cards
 $blue-gradient--card: linear-gradient(180deg, #0456D0 0%, #099FF4 100%);
+$lightblue-gradient--card: linear-gradient(180deg, #0449D0 0%, #09D8F4 100%);
+$purple-gradient--card: linear-gradient(180deg, #51277B 0%, #1B1F22 100%);
+$red-gradient--card: linear-gradient(180deg, #D08B04 0%, #F43309 100%);
 $green-gradient--card: linear-gradient(180deg, #04B9D0 0%, #82F409 100%);
 $yellow-gradient--card: linear-gradient(180deg, #D0C804 0%, #F4C009 100%);
 //radial
