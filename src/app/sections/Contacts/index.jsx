@@ -35,7 +35,7 @@ const Contacts = () => {
     const renderSocials = (i) => {
 
         return (
-            <div className={classnames(style.leftSideContent, {[style.leftSideContentAnimated]: isAnimated})}>
+            <div id="transfer" className={classnames(style.leftSideContent, {[style.leftSideContentAnimated]: isAnimated})}>
                 {
                     slides[activeSlide].socials.map((network) => (
                         <div className={style.socialWrapper} key={`${network.title}_${i}`}>

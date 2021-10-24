@@ -3,9 +3,9 @@ import classnames from "classnames";
 
 import style from "./style.module.scss";
 
-const Wrapper = ({children, padding, extraClassName}) => {
+const Wrapper = ({id, children, padding, extraClassName}) => {
     return (
-        <div className={classnames(style.wrapper, extraClassName)} style={{padding: `0 ${padding}px`}}>
+        <div id={id} className={classnames(style.wrapper, extraClassName)} style={{padding: `0 ${padding}px`}}>
             {children}
         </div>
     );

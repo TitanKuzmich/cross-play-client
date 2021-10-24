@@ -1,18 +1,18 @@
 export const paths = [
     {
         name: "Главная",
-        route: "#main"
+        route: "/main"
     },
     {
         name: "Почему это безопасно?",
-        route: "#safety"
+        route: "/safe"
     },
     {
         name: "Начать перенос",
-        route: "#transfer"
+        route: "/transfer"
     },
     {
         name: "Контакты",
-        route: "#contacts"
+        route: "/contacts"
     }
 ]

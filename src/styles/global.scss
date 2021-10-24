@@ -6,13 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif, 'Rubik Mono One', sans-serif;
-  outline: none;
+  outline: none !important;
 }
 
 #root{
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
 }

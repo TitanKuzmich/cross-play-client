@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import classnames from "classnames";
 
+import Wrapper from "../Wrapper";
+
 import style from "./style.module.scss";
 import {paths} from "./helper";
-import Wrapper from "../Wrapper";
 
 import logo from "../../assets/svg/astronaut.svg";
 
@@ -25,7 +26,7 @@ const Header = () => {
                             <NavLink
                                 className={classnames(style.menuItem, "text text--big")}
                                 to={path.route}
-                                isActive={() => window.location.hash === path.route}
+                                isActive={() => window.location.pathname === path.route}
                                 activeClassName={style.menuItemActive}
                                 onClick={() => {setOpen(false)}}
                             >

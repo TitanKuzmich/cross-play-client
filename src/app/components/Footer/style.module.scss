@@ -34,8 +34,6 @@
   }
 
   .policyWrapper{
-    padding: 23px;
-
     @include mediaMax(795){
       padding: 0;
     }

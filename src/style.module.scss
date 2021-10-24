@@ -2,24 +2,19 @@
 
 .invitationCat{
   position: absolute;
-  right: -110px;
-  bottom: -110px;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
   width: 160px;
   height: 160px;
-  transition: all 0.3s ease-in-out;
-  border-bottom-left-radius: 30%;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 10%;
-
-  &Open{
-    right: 0;
-    bottom: 0;
-  }
 
   .lottieWrapper{
+    right: -110px;
+    bottom: -110px;
     width: 100%;
     height: 100%;
     position: relative;
+    transition: all 0.3s ease-in-out;
 
     &:before{
       position: absolute;
@@ -32,9 +27,16 @@
       background: #FFFFFF;
       transform: rotate(-13deg);
     }
+
+
+    &Open{
+      right: 0;
+      bottom: 0;
+    }
   }
 
   .arrowsOpen{
+    transition: all 0.3s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;

@@ -1476,15 +1476,6 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@sdgluck/fullpage-react@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@sdgluck/fullpage-react/-/fullpage-react-2.0.3.tgz#8a84061b219907e6992544acc36bb619ace96fa9"
-  integrity sha1-ioQGGyGZB+aZJUSsw2u2Gazpb6k=
-  dependencies:
-    object-assign "^4.1.0"
-    react-tappable "^0.8.4"
-    scroll-swipe "0.0.4"
-
 "@sinonjs/commons@^1.7.0":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.2.tgz#858f5c4b48d80778fde4b9d541f27edc0d56488b"
@@ -9624,11 +9615,6 @@ react-scrollbars-custom@^4.0.27:
     react-draggable "^4.4.2"
     zoom-level "^2.5.0"
 
-react-tappable@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/react-tappable/-/react-tappable-0.8.4.tgz#c3670cf0c4eb71b2764deb749a3adac1d628af78"
-  integrity sha1-w2cM8MTrcbJ2Tet0mjrawdYor3g=
-
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -10241,11 +10227,6 @@ schema-utils@^3.0.0:
     "@types/json-schema" "^7.0.6"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
-
-scroll-swipe@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/scroll-swipe/-/scroll-swipe-0.0.4.tgz#cb5447e2a1f03ff790fe208f4992fd395bbfc8ac"
-  integrity sha1-y1RH4qHwP/eQ/iCPSZL9OVu/yKw=
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"

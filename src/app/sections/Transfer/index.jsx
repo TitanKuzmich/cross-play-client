@@ -3,7 +3,7 @@ import classnames from "classnames";
 
 import Wrapper from "../../components/Wrapper";
 import SearchDynamic from "../../components/SearchDynamic";
-import PlatformCard from "./PlatformCard";
+import PlatformCard from "../../components/PlatformCard";
 import ScrollArea from "../../components/ScrollArea";
 
 import style from "./style.module.scss";
@@ -24,7 +24,7 @@ const Transfer = () => {
     }
 
     return (
-        <Wrapper extraClassName={style.mainWrapper}>
+        <Wrapper id="contacts" extraClassName={style.mainWrapper}>
 
             <div className={style.subHeader}>
                 <div className={classnames(style.subHeaderText, "disappearOnTablet")}>
