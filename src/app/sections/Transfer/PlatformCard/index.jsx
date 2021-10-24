@@ -5,7 +5,7 @@ import style from "./style.module.scss";
 
 const PlatformCard = ({title, icon, link}) => {
     return (
-        <a href={link} target="_blank" rel="noreferrer" className="text">
+        <a href={link} target="_blank" rel="noreferrer" className={classnames(style.platformLink, "text")}>
             <div className={classnames(style.cardWrapper, {
                 [style.cardWrapperSpotify]: title === "Spotify",
                 [style.cardWrapperVk]: title === "VKontakte",

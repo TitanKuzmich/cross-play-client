@@ -48,7 +48,7 @@ const App = () => {
             {/*<Main/>*/}
             {/*<WhySafe/>*/}
             {/*<Contacts/>*/}
-            <Transfer/>
+            {/*<Transfer/>*/}
             <Footer/>
             <div className={classnames(style.invitationCat, {[style.invitationCatOpen]: invCatOpen})}>
                 <div className={style.lottieWrapper}>

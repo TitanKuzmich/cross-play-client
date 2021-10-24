@@ -27,6 +27,15 @@
     transition: all .6s ease-in-out;
   }
 
+  @include mediaMax(950){
+    width: 250px;
+    height: 270px;
+  }
+
+  @include mediaMax(850){
+    width: 100%;
+  }
+
   &Spotify{
     box-shadow: $green-shadow;
 
@@ -54,6 +63,7 @@
   .cardTitle{
     position: relative;
     z-index: 1;
+    text-align: center;
   }
 
   .cardIcon {
@@ -75,5 +85,14 @@
     &:before{
       clip-path: circle(450px at center 96px);
     }
+  }
+}
+
+.platformLink{
+  @include mediaMax(850){
+    width: 75%;
+  }
+  @include mediaMax(535){
+    width: 98%;
   }
 }

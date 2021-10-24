@@ -13,17 +13,17 @@
 
   @include mediaMax(760) {
     padding: 46px 36px 0 36px;
-    height: calc(100vh - 148px);
   }
 
-  @include mediaMax(340) {
-    padding: 76px 36px 0 36px;
+  @include mediaMax(450) {
+    padding: 26px 0 0 0;
   }
 
   .subHeader{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     &Text{
       max-width: 70%;
@@ -32,6 +32,32 @@
       @include mediaMax(1100){
         max-width: 60%;
       }
+
+      @include mediaMax(900){
+        max-width: 100%;
+        margin-bottom: 5px;
+      }
+
+      @include mediaMax(350){
+        text-align: center;
+      }
+    }
+
+    @include mediaMax(900){
+      margin-top: 15px;
+    }
+
+    @include mediaMax(670){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mediaMax(500){
+      margin-top: 0;
+    }
+
+    @include mediaMax(350){
+      align-items: center;
     }
   }
 
@@ -39,26 +65,28 @@
     height: 100%;
 
     .scrollWrapper{
-      margin-top: 10px;
       padding: 40px!important;
       width: 100%;
       height: 100%;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 50px;
+      justify-items: center;
       align-items: center;
-      flex-wrap: wrap;
       overflow-x: hidden;
 
-      .scroller{
-        color: $yellow;
+      @include mediaMax(1300){
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 70px;
       }
-    }
 
-    .platform{
-      margin-bottom: 70px;
-      margin-right: 90px;
+      @include mediaMax(950){
+        grid-row-gap: 40px;
+      }
 
-      &:nth-child(3n){
-        margin-right: 0;
+      @include mediaMax(850){
+        grid-template-columns: 1fr;
+        grid-row-gap: 70px;
       }
     }
   }
