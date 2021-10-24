@@ -1,5 +1,5 @@
-import React, {Suspense, useState} from 'react';
-import {Redirect, Route, Switch, useHistory} from "react-router-dom";
+import React, {Suspense, useEffect, useState} from 'react';
+import {Redirect, Route, Switch, useHistory, useLocation} from "react-router-dom";
 import classnames from "classnames";
 import Lottie from "react-lottie";
 
@@ -13,11 +13,15 @@ import style from "./style.module.scss";
 import invitationCat from "./app/assets/lottie/invitationCat.json";
 import arrowsOpen from "./app/assets/lottie/arrows.json";
 
-import {redirects, routes} from "./routes/routesAndHistory";
+import {redirects, routes, setPageTitle} from "./routes/routesAndHistory";
+
+const PAGE_TITLE_PREFIX = "CrossPL";
 
 const App = () => {
     const history = useHistory();
     const [invCatOpen, setInvCatOpen] = useState(false);
+    const { pathname, search } = useLocation();
+
     const invitationCatOptions = {
         loop: true,
         autoplay: true,
@@ -36,6 +40,10 @@ const App = () => {
         }
     };
 
+    useEffect(() => {
+        setPageTitle({ prefix: PAGE_TITLE_PREFIX, routes: routes(), pathname, search })
+    }, [pathname, search])
+
     return (
         <>
             <Gradient/>
@@ -51,18 +59,18 @@ const App = () => {
                             strict={redirect.strict}
                         />
                     ))}
+                    {
+                        routes().map(
+                            route => (
+                                <Route
+                                    key={Array.isArray(route.path) ? route.path.join("") : route.path}
+                                    path={route.path}
+                                    component={route.component}
+                                    exact={route.exact}
+                                />
+                            ))
+                    }
                 </Switch>
-                {
-                    routes().map(
-                        route => (
-                            <Route
-                                key={Array.isArray(route.path) ? route.path.join("") : route.path}
-                                path={route.path}
-                                component={route.component}
-                                exact={route.exact}
-                            />
-                        ))
-                }
             </Suspense>
             <Footer/>
             <div className={style.invitationCat}>

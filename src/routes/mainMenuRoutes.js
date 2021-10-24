@@ -13,7 +13,7 @@ export const mainMenuRoutes = () => {
       slug: "main",
       component: Main,
       exact: true,
-      title: "CrossPL"
+      title: "Main"
     },
     {
       path: "/safe",
@@ -21,7 +21,7 @@ export const mainMenuRoutes = () => {
       slug: "why-safe",
       component: WhySafe,
       exact: true,
-      title: "My DIDs"
+      title: "Why Safe"
     },
     {
       path: "/transfer",
