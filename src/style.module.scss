@@ -1,4 +1,31 @@
 @import "./styles/palette";
+@import "./styles/mixins";
+
+.bigPlatformInscription{
+  position:absolute;
+  height: 138px;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+
+  @include mediaMax(1300){
+    height: 100px;
+    bottom: 10px;
+  }
+
+  @include mediaMax(1100){
+    height: 70px;
+    bottom: 12px;
+  }
+
+  @include mediaMax(900){
+    height: 40px;
+  }
+
+  @include mediaMax(745){
+    display: none;
+  }
+}
 
 .invitationCat{
   position: absolute;

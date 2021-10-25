@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import classnames from "classnames";
 
 import style from "./style.module.scss";
 
 const PlatformCard = ({title, icon, link}) => {
     return (
-        <a href={link} target="_blank" rel="noreferrer" className={classnames(style.platformLink, "text")}>
+        <Link to={link} className={classnames(style.platformLink, "text")}>
             <div className={classnames(style.cardWrapper, {
                 [style.cardWrapperSpotify]: title === "Spotify",
                 [style.cardWrapperVk]: title === "VKontakte",
@@ -18,7 +19,7 @@ const PlatformCard = ({title, icon, link}) => {
                 </div>
                 <p className={classnames(style.cardTitle, "text text--big")}>{title}</p>
             </div>
-        </a>
+        </Link>
     );
 };
 

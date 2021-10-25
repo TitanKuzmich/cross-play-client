@@ -9,11 +9,23 @@
   outline: none !important;
 }
 
-#root{
+.app-wrapper{
   min-height: 100vh;
   position: relative;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
+
+  &--vk{
+    background: $blue-gradient--card;
+  }
+
+  &--spotify{
+    background: $green-gradient--card;
+  }
+
+  &--yandex{
+    background: $yellow-gradient--card;
+  }
 }
 
 .disappearOnComp{
@@ -41,11 +53,18 @@
   color: $white;
 
   &--giant {
-    font-size: 200px;
-    line-height: 244px;
+    font-size: 138px;
 
     @include mediaMax(1300){
+      font-size: 100px;
+    }
 
+    @include mediaMax(1100){
+      font-size: 70px;
+    }
+
+    @include mediaMax(900){
+      font-size: 40px;
     }
   }
 

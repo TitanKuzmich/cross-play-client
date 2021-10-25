@@ -8,7 +8,7 @@ const Divider = ({vertical, width, extraClassName}) => {
     return (
         <div
             className={classnames(style.divider, {
-                [style.vertical]: vertical,
+                [style.dividerVertical]: vertical,
                 [style.dividerMedium]: width === "medium",
                 [style.dividerSmall]: width === "small",
                 [extraClassName]: extraClassName

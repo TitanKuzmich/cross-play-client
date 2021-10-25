@@ -1,0 +1,190 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/palette";
+
+.mainWrapper{
+  height: calc(100vh - 256px);
+  padding: 60px 73px 0 73px;
+
+  @include mediaMax(1300){
+    padding: 50px 43px 0 43px;
+    height: calc(100vh - 200px);
+  }
+
+  @include mediaMax(1000){
+    height: calc(100vh - 165px);
+    padding: 60px 0 0 0;
+  }
+
+  @include mediaMax(600){
+    padding: 60px 0 0 0;
+    height: calc(100vh - 156px);
+  }
+
+  @include mediaMax(400){
+    padding: 40px 0 0 0;
+    height: calc(100vh - 106px);
+    overflow: hidden;
+  }
+
+  .tabWrapper{
+    height: 100%;
+
+    @include mediaMax(1100){
+      .dividerClassName{
+        margin: 0 15px;
+      }
+    }
+
+    @include mediaMax(1003){
+      .dividerClassName{
+        display: none;
+      }
+    }
+  }
+
+  .activeTab{
+    color: $blue;
+  }
+
+  .noticeTab{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .textContent{
+      width: 56%;
+
+      &Auth{
+        width: 100%;
+      }
+
+      &Wrapper{
+        margin-bottom: 35px;
+      }
+
+      &Title{
+        margin-bottom: 30px;
+
+        &List{
+          margin-bottom: 10px;
+        }
+
+        &Centered{
+          text-align: center;
+        }
+
+        @include mediaMax(400){
+          font-size: 22px;
+        }
+      }
+
+      .linkToPlatform{
+        position: relative;
+
+        &:before {
+          content: "";
+          @include underline-link();
+          background-color: $white;
+          transform: scaleX(0);
+        }
+
+        &:hover:before {
+          content: "";
+          @include underline-link();
+          background-color: $white;
+          transform: scaleX(1);
+        }
+      }
+
+      .formWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .authForm{
+          width: 25%;
+        }
+
+        .tokenForm{
+          width: 35%;
+        }
+
+        .videoWrapper{
+          border: 1px solid $black;
+          height: 217px;
+          width: 30%;
+        }
+
+        .input{
+          margin-bottom: 30px;
+        }
+
+        @include mediaMax(730){
+          flex-wrap: wrap;
+
+          .authForm{
+            width: 45%;
+          }
+
+          .tokenForm{
+            width: 45%;
+          }
+
+          .videoWrapper{
+            width: 45%;
+            margin: 30px auto 0 auto;
+          }
+        }
+
+        @include mediaMax(484){
+          flex-direction: column;
+
+          .authForm{
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          .tokenForm{
+            width: 100%;
+          }
+
+          .videoWrapper{
+            width: 100%;
+          }
+        }
+      }
+
+      .actions{
+        @include mediaMax(846){
+          &>button>div {
+            font-size: 18px !important;
+          }
+        }
+      }
+
+      @include mediaMax(1000){
+        width: 100%;
+      }
+    }
+
+    .lottieContent{
+      width: 40%;
+      overflow: hidden;
+
+      & > div {
+        width: 90% !important;
+      }
+
+      &Big {
+        & > div {
+          width: 110% !important;
+        }
+      }
+
+      @include mediaMax(1000){
+        display: none;
+      }
+    }
+  }
+}

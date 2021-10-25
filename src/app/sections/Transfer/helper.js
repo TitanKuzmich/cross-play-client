@@ -6,46 +6,16 @@ export const platforms = [
     {
         title: "Spotify",
         icon: spotify,
-        link: "https://www.spotify.com/",
+        link: "/transfer/spotify"
     },
     {
         title: "Yandex Music",
         icon: yandex,
-        link: "https://music.yandex.ru/",
+        link: "/transfer/yandex"
     },
     {
         title: "VKontakte",
         icon: vk,
-        link: "https://vk.com/audio"
-    },
-    {
-        title: "Spotify",
-        icon: spotify,
-        link: "https://www.spotify.com/",
-    },
-    {
-        title: "VKontakte",
-        icon: vk,
-        link: "https://vk.com/audio"
-    },
-    {
-        title: "Yandex Music",
-        icon: yandex,
-        link: "https://music.yandex.ru/",
-    },
-    {
-        title: "Yandex Music",
-        icon: yandex,
-        link: "https://music.yandex.ru/",
-    },
-    {
-        title: "Spotify",
-        icon: spotify,
-        link: "https://www.spotify.com/",
-    },
-    {
-        title: "VKontakte",
-        icon: vk,
-        link: "https://vk.com/audio"
+        link: "/transfer/vk"
     }
 ]

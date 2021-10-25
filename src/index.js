@@ -9,22 +9,6 @@ import './styles/global.scss';
 
 const browserHistory = createBrowserHistory();
 
-browserHistory.listen(location => {
-    const { hash } = location;
-    if (hash !== '') {
-        setTimeout(
-            () => {
-                const id = hash.replace('#', '');
-                const element = document.getElementById(id);
-                if (element) {
-                    element.scrollIntoView({behavior: "smooth"});
-                }
-            },
-            0
-        );
-    }
-});
-
 ReactDOM.render(
     <React.StrictMode>
         <Router history={browserHistory}>

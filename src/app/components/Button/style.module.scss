@@ -1,0 +1,142 @@
+@import "../../../styles/mixins";
+@import "../../../styles/palette";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 35px;
+  text-decoration: none;
+  outline: none;
+  min-width: 134px;
+  cursor: pointer;
+  padding: 15px 10px;
+  overflow: hidden;
+  background-color: transparent;
+  border: 3px solid $white;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.4, 1);
+
+  .buttonText {
+    position: relative;
+    display: flex;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.4, 1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+
+    .buttonTextVk {
+      color: $blue;
+    }
+    .buttonTextSpotify {
+      color: $green;
+    }
+    .buttonTextYandex {
+      color: $yellow;
+    }
+  }
+
+  .buttonTransform{
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: $white;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.4, 1);
+      transition-duration: 300ms;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    .buttonText {
+      display: none;
+    }
+    svg {
+      display: none;
+    }
+    .loader {
+      font-size: 10px;
+      margin: auto;
+      text-indent: -9999em;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ffffff;
+      background: -moz-linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -webkit-linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -o-linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: -ms-linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+      position: relative;
+      -webkit-animation: load3 1.4s infinite linear;
+      animation: load3 1.4s infinite linear;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      &:before {
+        width: 50%;
+        height: 50%;
+        background: transparent;
+        border-radius: 100% 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+      }
+      &:after {
+        background-color: #6acc83;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        content: "";
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    &:before {
+      background-color: transparent;
+    }
+  }
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

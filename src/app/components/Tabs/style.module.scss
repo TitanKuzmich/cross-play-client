@@ -1,0 +1,53 @@
+@import "../../../styles/palette";
+@import "../../../styles/mixins";
+
+.tabNamesWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mediaMax(730){
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+}
+
+.tabName {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+
+  &.tabNameActive {
+    background: $white;
+  }
+
+  @include mediaMax(840){
+    font-size: 24px !important;
+  }
+}
+
+.tabsWrapper {
+  margin-top: 24px;
+}
+
+.tab {
+  display: none;
+}
+
+.tabActive {
+  display: block;
+}
+
+.tabScroll{
+  @include mediaMax(730){
+    &>div>div{
+      height: 55vh;
+      overflow-y: scroll;
+    }
+  }
+}

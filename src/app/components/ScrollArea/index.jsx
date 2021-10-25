@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Scrollbar from "react-scrollbars-custom";
 
-const ScrollArea = ({minElems, numOfElems, className, children}) => {
+const ScrollArea = ({minElems = 1, numOfElems = 2, enableLibScroll = true, className, children}) => {
+
     return (
         <>
-            {numOfElems > minElems ?
+            {(numOfElems > minElems && enableLibScroll) ?
                 (
                     <Scrollbar
                         noScrollX

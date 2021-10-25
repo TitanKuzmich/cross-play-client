@@ -1,5 +1,5 @@
 import React, {Suspense, useEffect, useState} from 'react';
-import {Redirect, Route, Switch, useHistory, useLocation} from "react-router-dom";
+import {Redirect, Route, Switch, useLocation} from "react-router-dom";
 import classnames from "classnames";
 import Lottie from "react-lottie";
 
@@ -18,9 +18,12 @@ import {redirects, routes, setPageTitle} from "./routes/routesAndHistory";
 const PAGE_TITLE_PREFIX = "CrossPL";
 
 const App = () => {
-    const history = useHistory();
     const [invCatOpen, setInvCatOpen] = useState(false);
-    const { pathname, search } = useLocation();
+    const {pathname, search} = useLocation();
+    const [showGradient, setShowGradient] = useState(!pathname.match(/transfer\/(vk|inst|yandex)/));
+    const [vkBg, setVkBg] = useState(!!pathname.match(/transfer\/vk/));
+    const [spotifyBg, setSpotifyBg] = useState(!!pathname.match(/transfer\/spotify/));
+    const [yandexBg, setYandexBg] = useState(!!pathname.match(/transfer\/yandex/));
 
     const invitationCatOptions = {
         loop: true,
@@ -41,12 +44,21 @@ const App = () => {
     };
 
     useEffect(() => {
-        setPageTitle({ prefix: PAGE_TITLE_PREFIX, routes: routes(), pathname, search })
+        setShowGradient(!pathname.match(/transfer\/(vk|spotify|yandex)/));
+        setVkBg(!!pathname.match(/transfer\/vk/));
+        setSpotifyBg(!!pathname.match(/transfer\/spotify/));
+        setYandexBg(!!pathname.match(/transfer\/yandex/));
+
+        setPageTitle({prefix: PAGE_TITLE_PREFIX, routes: routes(), pathname, search});
     }, [pathname, search])
 
     return (
-        <>
-            <Gradient/>
+        <div className={classnames("app-wrapper", {
+            ["app-wrapper--vk"]: vkBg,
+            ["app-wrapper--spotify"]: spotifyBg,
+            ["app-wrapper--yandex"]: yandexBg
+        })}>
+            {showGradient && <Gradient/>}
             <Header/>
             <Suspense fallback={<PageWrapper/>}>
                 <Switch>
@@ -73,19 +85,27 @@ const App = () => {
                 </Switch>
             </Suspense>
             <Footer/>
-            <div className={style.invitationCat}>
-                <div className={classnames(style.lottieWrapper, {[style.lottieWrapperOpen]: invCatOpen})}>
-                    <Lottie options={invitationCatOptions}/>
+            {showGradient && (
+                <div className={style.invitationCat}>
+                    <div className={classnames(style.lottieWrapper, {[style.lottieWrapperOpen]: invCatOpen})}>
+                        <Lottie options={invitationCatOptions}/>
 
-                    <div
-                        className={classnames(style.arrowsOpen, {[style.arrowsClose]: invCatOpen})}
-                        onClick={() => setInvCatOpen(!invCatOpen)}
-                    >
-                        <Lottie options={arrowsOpenOptions}/>
+                        <div
+                            className={classnames(style.arrowsOpen, {[style.arrowsClose]: invCatOpen})}
+                            onClick={() => setInvCatOpen(!invCatOpen)}
+                        >
+                            <Lottie options={arrowsOpenOptions}/>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </>
+            )}
+
+            { !!vkBg &&
+                <div className={classnames(style.bigPlatformInscription)}>
+                    <p className="text text--giant">ВКонтакте</p>
+                </div>
+            }
+        </div>
     );
 }
 

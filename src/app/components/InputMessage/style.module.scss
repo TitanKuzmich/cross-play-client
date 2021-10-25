@@ -1,0 +1,20 @@
+@import "../../../styles/palette";
+@import "../../../styles/mixins";
+
+.notice {
+  font-size: 11px;
+  line-height: 14px;
+  padding: 0 10px;
+  color: $active;
+
+  :global(&.hidden) {
+    opacity: 0;
+  }
+}
+
+.noticeInline {
+}
+
+.inputErrorMessage {
+  color: $red;
+}
