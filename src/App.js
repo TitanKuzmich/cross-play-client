@@ -105,6 +105,18 @@ const App = () => {
                     <p className="text text--giant">ВКонтакте</p>
                 </div>
             }
+
+            { !!spotifyBg &&
+                <div className={classnames(style.bigPlatformInscription)}>
+                    <p className="text text--giant">Spotify</p>
+                </div>
+            }
+
+            { !!yandexBg &&
+                <div className={classnames(style.bigPlatformInscription)}>
+                    <p className="text text--giant">Yandex Music</p>
+                </div>
+            }
         </div>
     );
 }

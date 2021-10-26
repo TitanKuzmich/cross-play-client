@@ -3,23 +3,22 @@
 
 .bigPlatformInscription{
   position:absolute;
-  height: 138px;
+  height: 155px;
   overflow: hidden;
   bottom: 0;
   right: 0;
 
   @include mediaMax(1300){
-    height: 100px;
-    bottom: 10px;
+    height: 115px;
   }
 
   @include mediaMax(1100){
-    height: 70px;
-    bottom: 12px;
+    height: 85px;
+    bottom: -1px;
   }
 
   @include mediaMax(900){
-    height: 40px;
+    height: 55px;
   }
 
   @include mediaMax(745){
