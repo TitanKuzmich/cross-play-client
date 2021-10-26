@@ -44,6 +44,7 @@
 }
 
 .tabScroll{
+  height: 55vh;
   @include mediaMax(730){
     &>div>div{
       height: 55vh;
